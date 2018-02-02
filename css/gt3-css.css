@@ -34,7 +34,7 @@ H1.page-title {
 }
 
 DIV.gt-page-body {
-  max-width: 1170px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -86,7 +86,7 @@ DIV.region-header {
 }
 
 DIV.region-header, DIV.region-primary-menu {
-  max-width: 1170px;
+  max-width: 1600px;
   margin: 0 auto;
   line-height: 1.2;
   clear: both;
@@ -153,7 +153,7 @@ FOOTER#gt-footer {
 
 DIV.gt-gt-header {
   position: relative;
-  max-width: 1242px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 10px;
   font-size: 86%;
@@ -163,7 +163,6 @@ DIV.gt-gt-header {
 DIV.gt-gt-header DIV.gt-header-linkbar {
   min-height: 44px;
 }
-
 
 /*-- Header Links Left Logo Area --*/
 
@@ -724,7 +723,7 @@ DIV.gt-main-menu NAV.gt-menu-quick {
 
 DIV.gt-site-footer {
   position: relative;
-  max-width: 1170px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 10px;
   text-align: center;
@@ -744,7 +743,7 @@ DIV.gt-site-footer P {
 /*=== GT Gold Footer Bar Style Rules ===*/
 
 DIV.gt-gt-footer {
-  max-width: 1170px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 10px;
   overflow: auto;
