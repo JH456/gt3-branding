@@ -1102,3 +1102,8 @@ I.svg-magglass {
 #docsviewer_viewer h2 {
   display: none !important;
 }
+
+#docsviewer_viewer iframe {
+  height: 600px;
+  width: 90%;
+}

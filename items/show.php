@@ -34,34 +34,39 @@ function fire_specific_plugin_hook($pluginName, $hookName, $args = array())
 </div>
 <?php endif;?>
 
-<div class='w3-row' style='display: flex; justify-content: space-between;'>
-    <section id='primary'>
-        <?php if ((get_theme_option('Item FileGallery') == 0) && metadata('item', 'has files')): ?>
-        <?php fire_specific_plugin_hook('DocsViewer', 'public_items_show', array('view' => $this, 'item' => $item)) ?>
-        <?php endif; ?>
-    </section>
-    <aside id="sidebar">
-        <section>
+<section class='w3-row'>
+    <div class='w3-row'>
+        <div class='w3-col s6 m6 l6'>
+            <?php if ((get_theme_option('Item FileGallery') == 0) && metadata('item', 'has files')): ?>
+            <?php fire_specific_plugin_hook('DocsViewer', 'public_items_show', array('view' => $this, 'item' => $item)) ?>
+            <?php endif; ?>
+        </div>
+        <div class='w3-col s6 m6 l6'>
             <h2>Document Text</h2>
-            <p style='height: 683px; overflow-y: scroll;'><?php echo metadata('item', array('Item Type Metadata', 'Text')); ?></p>
-            <?php fire_specific_plugin_hook('Scripto', 'public_items_show', array('view' => $this, 'item' => $item)) ?>
-        </section>
-        <!-- The following returns all of the files associated with an item. -->
-        <?php if ((get_theme_option('Item FileGallery') == 1) && metadata('item', 'has files')): ?>
-        <div id="itemfiles" class="element">
-            <h2><?php echo __('Files'); ?></h2>
-            <?php echo item_image_gallery(); ?>
-        </div>
-        <?php endif; ?>
+            <p style='height: 600px; overflow-y: scroll;'><?php echo metadata('item', array('Item Type Metadata', 'Text')); ?></p>
+            <!-- The following returns all of the files associated with an item. -->
+            <?php if ((get_theme_option('Item FileGallery') == 1) && metadata('item', 'has files')): ?>
+            <div id="itemfiles" class="element">
+                <h2><?php echo __('Files'); ?></h2>
+                <?php echo item_image_gallery(); ?>
+            </div>
+            <?php endif; ?>
 
-        <!-- If the item belongs to a collection, the following creates a link to that collection. -->
-        <?php if (metadata('item', 'Collection Name')): ?>
-        <div id="collection" class="element">
-            <h2><?php echo __('Collection'); ?></h2>
-            <div class="element-text"><p><?php echo link_to_collection_for_item(); ?></p></div>
+            <!-- If the item belongs to a collection, the following creates a link to that collection. -->
+            <?php if (metadata('item', 'Collection Name')): ?>
+            <div id="collection" class="element">
+                <h2><?php echo __('Collection'); ?></h2>
+                <div class="element-text"><p><?php echo link_to_collection_for_item(); ?></p></div>
+            </div>
+            <?php endif; ?>
         </div>
-        <?php endif; ?>
-    </aside>
+    </div>
+</section>
+
+<div class='w3-row'>
+    <section>
+        <?php fire_specific_plugin_hook('Scripto', 'public_items_show', array('view' => $this, 'item' => $item)) ?>
+    </section>
 </div>
 
 <div class='w3-row'>
