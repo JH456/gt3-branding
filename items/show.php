@@ -42,7 +42,8 @@ function fire_specific_plugin_hook($pluginName, $hookName, $args = array())
     </section>
     <aside id="sidebar">
         <section>
-            <?php echo all_element_texts('item'); ?>
+            <h2>Document Text</h2>
+            <p style='height: 683px; overflow-y: scroll;'><?php echo metadata('item', array('Item Type Metadata', 'Text')); ?></p>
             <?php fire_specific_plugin_hook('Scripto', 'public_items_show', array('view' => $this, 'item' => $item)) ?>
         </section>
         <!-- The following returns all of the files associated with an item. -->

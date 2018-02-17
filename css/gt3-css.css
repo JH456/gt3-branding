@@ -1098,3 +1098,7 @@ I.svg-magglass {
   box-sizing: initial;
   font-size: .95em;
 }
+
+#docsviewer_viewer h2 {
+  display: none !important;
+}
